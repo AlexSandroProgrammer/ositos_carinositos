@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Amor ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Countdown Section -->
+    <div id="countdown-container">
+      <section
+        class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <div
+            class="care-bear care-bear-pink float-animation absolute top-10 left-10"
+          ></div>
+          <div
+            class="care-bear care-bear-blue bounce-animation absolute top-20 right-20"
+          ></div>
+          <div
+            class="care-bear care-bear-green float-animation absolute bottom-20 left-20"
+          ></div>
+          <div
+            class="care-bear care-bear-pink bounce-animation absolute bottom-10 right-10"
+          ></div>
+        </div>
+
+        <div class="container mx-auto p-4 relative z-10">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 scroll-animation">
+              <span class="text-6xl">🎂</span>
+              ¡Se viene tu dia especial!
+            </h2>
+          </div>
+
+          <div class="text-center scroll-animation">
+            <h3
+              class="text-2xl md:text-3xl font-bold mb-8"
+              id="countdown-title"
+            >
+              Faltan <span id="days-left" class="text-yellow-300"></span> días
+              para tu cumpleaños
+            </h3>
+
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto mb-8"
+            >
+              <div class="countdown-number p-6 rounded-xl text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="days">0</div>
+                <div class="text-sm md:text-lg font-medium mt-2">Días</div>
+              </div>
+              <div class="countdown-number p-6 rounded-xl text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="hours">0</div>
+                <div class="text-sm md:text-lg font-medium mt-2">Horas</div>
+              </div>
+              <div class="countdown-number p-6 rounded-xl text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="minutes">0</div>
+                <div class="text-sm md:text-lg font-medium mt-2">Minutos</div>
+              </div>
+              <div class="countdown-number p-6 rounded-xl text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="seconds">0</div>
+                <div class="text-sm md:text-lg font-medium mt-2">Segundos</div>
+              </div>
+            </div>
+
+            <div class="birthday-message p-6 rounded-2xl max-w-2xl mx-auto">
+              <p class="text-lg md:text-xl" id="countdown-message">
+                No puedo esperar a celebrar contigo y hacerte sentir lo especial
+                que eres para mí 💖
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="birthday-celebration">
+      <!-- Navigation -->
+      <nav class="gradient-bg p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+          <div class="text-white font-bold text-xl flex items-center">
+            <span class="heart-beat mr-2">❤️</span>
+            Mi Amor
+          </div>
+          <div class="hidden md:flex space-x-6">
+            <a
+              href="#inicio"
+              class="nav-item text-white hover:text-blue-200 font-medium"
+              >Inicio</a
+            >
+            <a
+              href="#contador"
+              class="nav-item text-white hover:text-blue-200 font-medium"
+              >Tu Cumpleaños</a
+            >
+            <a
+              href="#galeria"
+              class="nav-item text-white hover:text-blue-200 font-medium"
+              >Galería</a
+            >
+            <a
+              href="#timeline"
+              class="nav-item text-white hover:text-blue-200 font-medium"
+              >Nuestra Historia</a
+            >
+            <a
+              href="#mensajes"
+              class="nav-item text-white hover:text-blue-200 font-medium"
+              >Mensajes</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-white">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+          <a
+            href="#inicio"
+            class="block text-white hover:text-blue-200 font-medium py-2"
+            >Inicio</a
+          >
+          <a
+            href="#contador"
+            class="block text-white hover:text-blue-200 font-medium py-2"
+            >Tu Cumpleaños</a
+          >
+          <a
+            href="#galeria"
+            class="block text-white hover:text-blue-200 font-medium py-2"
+            >Galería</a
+          >
+          <a
+            href="#timeline"
+            class="block text-white hover:text-blue-200 font-medium py-2"
+            >Nuestra Historia</a
+          >
+          <a
+            href="#mensajes"
+            class="block text-white hover:text-blue-200 font-medium py-2"
+            >Mensajes</a
+          >
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        id="inicio"
+        class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <div
+            class="care-bear care-bear-pink float-animation absolute top-20 left-10"
+          ></div>
+          <div
+            class="care-bear care-bear-blue bounce-animation absolute top-32 right-20"
+          ></div>
+          <div
+            class="care-bear care-bear-green float-animation absolute bottom-32 left-20"
+          ></div>
+          <div
+            class="care-bear care-bear-pink bounce-animation absolute bottom-20 right-10"
+          ></div>
+        </div>
+        <div class="text-center z-10 px-4">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 scroll-animation">
+            Para Mi Osita Cariñosita
+          </h1>
+          <p
+            class="text-xl md:text-2xl mb-8 scroll-animation max-w-3xl mx-auto"
+          >
+            Esta página es un pequeño regalo para tu cumpleaños el cual muestra
+            todos los momentos y recuerdos hermosos que hemos vivido juntos.
+            Porque cada momento que paso contigo es un regalo y una bendición
+            del cielo.
+          </p>
+          <div class="scroll-animation">
+            <span class="text-6xl heart-beat">💕</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="galeria" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4 scroll-animation">
+              Nuestra Galería de Recuerdos
+            </h2>
+            <p class="text-xl text-gray-600 scroll-animation">
+              Los momentos más hermosos que hemos compartido
+            </p>
+            <div class="flex justify-center mt-4">
+              <div class="care-bear care-bear-pink float-animation"></div>
+              <div class="care-bear care-bear-blue bounce-animation"></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Gallery Items -->
+            <div
+              class="gallery-item bg-blue-100 rounded-lg overflow-hidden shadow-lg scroll-animation"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=300&fit=crop"
+                alt="Primer encuentro"
+                class="gallery-image"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-gray-800 mb-2">
+                  Nuestro Primer Encuentro
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  El momento que cambió nuestras vidas para siempre
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item bg-pink-100 rounded-lg overflow-hidden shadow-lg scroll-animation"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop"
+                alt="Primera cita"
+                class="gallery-image"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-gray-800 mb-2">Primera Cita</h3>
+                <p class="text-gray-600 text-sm">
+                  Una noche mágica llena de risas y conexión
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item bg-purple-100 rounded-lg overflow-hidden shadow-lg scroll-animation"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop"
+                alt="Aniversario"
+                class="gallery-image"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-gray-800 mb-2">Aniversario</h3>
+                <p class="text-gray-600 text-sm">
+                  Celebrando nuestro amor con flores y promesas
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item bg-green-100 rounded-lg overflow-hidden shadow-lg scroll-animation"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop"
+                alt="Nuestro viaje"
+                class="gallery-image"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-gray-800 mb-2">Nuestro Viaje</h3>
+                <p class="text-gray-600 text-sm">
+                  Aventuras juntos descubriendo el mundo
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item bg-yellow-100 rounded-lg overflow-hidden shadow-lg scroll-animation"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&h=300&fit=crop"
+                alt="Celebración especial"
+                class="gallery-image"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-gray-800 mb-2">
+                  Celebración Especial
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Momentos de alegría y festejo compartidos
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item bg-indigo-100 rounded-lg overflow-hidden shadow-lg scroll-animation"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+                alt="Noche romántica"
+                class="gallery-image"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-gray-800 mb-2">Noche Romántica</h3>
+                <p class="text-gray-600 text-sm">
+                  Bajo las estrellas, solo tú y yo
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section
+        id="timeline"
+        class="py-20 gradient-bg text-white relative overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <div
+            class="care-bear care-bear-green float-animation absolute top-10 right-10"
+          ></div>
+          <div
+            class="care-bear care-bear-pink bounce-animation absolute bottom-10 left-10"
+          ></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4 scroll-animation">
+              Nuestra Línea del Tiempo
+            </h2>
+            <p class="text-xl scroll-animation">
+              Los hitos más importantes de nuestra historia de amor
+            </p>
+          </div>
+
+          <div class="max-w-4xl mx-auto">
+            <!-- Mobile Timeline -->
+            <div class="block md:hidden timeline-container">
+              <div class="timeline-line"></div>
+
+              <div
+                class="timeline-item-mobile timeline-item"
+                style="animation-delay: 0.2s"
+              >
+                <div
+                  class="timeline-dot border-blue-300"
+                  style="border-color: #93c5fd"
+                ></div>
+                <div class="timeline-content">
+                  <h3 class="text-xl font-bold mb-2">Primer Encuentro</h3>
+                  <p class="text-blue-100">
+                    El día que nuestros ojos se cruzaron por primera vez y supe
+                    que eras especial
+                  </p>
+                  <p class="text-sm text-blue-200 mt-2">Enero 2023</p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-item-mobile timeline-item"
+                style="animation-delay: 0.4s"
+              >
+                <div
+                  class="timeline-dot border-pink-300"
+                  style="border-color: #f9a8d4"
+                ></div>
+                <div class="timeline-content">
+                  <h3 class="text-xl font-bold mb-2">Primera Cita</h3>
+                  <p class="text-blue-100">
+                    Una noche mágica que marcó el inicio de nuestra hermosa
+                    aventura juntos
+                  </p>
+                  <p class="text-sm text-blue-200 mt-2">Febrero 2023</p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-item-mobile timeline-item"
+                style="animation-delay: 0.6s"
+              >
+                <div
+                  class="timeline-dot border-purple-300"
+                  style="border-color: #c4b5fd"
+                ></div>
+                <div class="timeline-content">
+                  <h3 class="text-xl font-bold mb-2">Primer "Te Amo"</h3>
+                  <p class="text-blue-100">
+                    Las palabras más sinceras que han salido de mi corazón
+                  </p>
+                  <p class="text-sm text-blue-200 mt-2">Abril 2023</p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-item-mobile timeline-item"
+                style="animation-delay: 0.8s"
+              >
+                <div
+                  class="timeline-dot border-green-300"
+                  style="border-color: #86efac"
+                ></div>
+                <div class="timeline-content">
+                  <h3 class="text-xl font-bold mb-2">Primer Aniversario</h3>
+                  <p class="text-blue-100">
+                    Celebrando un año lleno de amor, risas y momentos
+                    inolvidables
+                  </p>
+                  <p class="text-sm text-blue-200 mt-2">Febrero 2024</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop Timeline -->
+            <div class="hidden md:block relative">
+              <div class="timeline-line"></div>
+
+              <div
+                class="timeline-item-desktop timeline-item"
+                style="animation-delay: 0.2s"
+              >
+                <div class="w-1/2 pr-8 text-right">
+                  <div class="message-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Primer Encuentro</h3>
+                    <p class="text-blue-100">
+                      El día que nuestros ojos se cruzaron por primera vez y
+                      supe que eras especial
+                    </p>
+                    <p class="text-sm text-blue-200 mt-2">Enero 2023</p>
+                  </div>
+                </div>
+                <div class="timeline-dot-desktop border-blue-300">
+                  <span class="text-blue-500">❤️</span>
+                </div>
+                <div class="w-1/2 pl-8"></div>
+              </div>
+
+              <div
+                class="timeline-item-desktop timeline-item"
+                style="animation-delay: 0.4s"
+              >
+                <div class="w-1/2 pr-8"></div>
+                <div class="timeline-dot-desktop border-pink-300">
+                  <span class="text-pink-500">💕</span>
+                </div>
+                <div class="w-1/2 pl-8">
+                  <div class="message-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Primera Cita</h3>
+                    <p class="text-blue-100">
+                      Una noche mágica que marcó el inicio de nuestra hermosa
+                      aventura juntos
+                    </p>
+                    <p class="text-sm text-blue-200 mt-2">Febrero 2023</p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="timeline-item-desktop timeline-item"
+                style="animation-delay: 0.6s"
+              >
+                <div class="w-1/2 pr-8 text-right">
+                  <div class="message-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Primer "Te Amo"</h3>
+                    <p class="text-blue-100">
+                      Las palabras más sinceras que han salido de mi corazón
+                    </p>
+                    <p class="text-sm text-blue-200 mt-2">Abril 2023</p>
+                  </div>
+                </div>
+                <div class="timeline-dot-desktop border-purple-300">
+                  <span class="text-purple-500">💜</span>
+                </div>
+                <div class="w-1/2 pl-8"></div>
+              </div>
+
+              <div
+                class="timeline-item-desktop timeline-item"
+                style="animation-delay: 0.8s"
+              >
+                <div class="w-1/2 pr-8"></div>
+                <div class="timeline-dot-desktop border-green-300">
+                  <span class="text-green-500">🌟</span>
+                </div>
+                <div class="w-1/2 pl-8">
+                  <div class="message-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Primer Aniversario</h3>
+                    <p class="text-blue-100">
+                      Celebrando un año lleno de amor, risas y momentos
+                      inolvidables
+                    </p>
+                    <p class="text-sm text-blue-200 mt-2">Febrero 2024</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Messages Section -->
+      <section id="mensajes" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4 scroll-animation">
+              Mensajes del Corazón
+            </h2>
+            <p class="text-xl text-gray-600 scroll-animation">
+              Palabras que brotan directamente de mi alma
+            </p>
+            <div class="flex justify-center mt-4">
+              <div class="care-bear care-bear-blue float-animation"></div>
+              <div class="care-bear care-bear-pink bounce-animation"></div>
+              <div class="care-bear care-bear-green float-animation"></div>
+            </div>
+          </div>
+
+          <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg scroll-animation"
+            >
+              <div class="text-4xl mb-4">💖</div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">
+                Mi Inspiración Diaria
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Cada mañana que despierto, tu amor es la primera luz que ilumina
+                mi día. Eres mi inspiración, mi motivación y la razón por la que
+                quiero ser mejor cada día.
+              </p>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-xl shadow-lg scroll-animation"
+            >
+              <div class="text-4xl mb-4">🌹</div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">
+                Promesa Eterna
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Prometo amarte en cada amanecer, cuidarte en cada tormenta, y
+                celebrar contigo cada pequeña victoria que la vida nos regale.
+              </p>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl shadow-lg scroll-animation"
+            >
+              <div class="text-4xl mb-4">✨</div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">
+                Mi Estrella Guía
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                En la inmensidad del universo, encontré mi estrella más
+                brillante: tú. Gracias por guiar mi camino con tu amor
+                incondicional.
+              </p>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg scroll-animation"
+            >
+              <div class="text-4xl mb-4">🦋</div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">
+                Transformación
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Tu amor me ha transformado como una mariposa emerge de su
+                capullo. Contigo he descubierto la versión más hermosa de quien
+                puedo ser.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+          <div class="flex justify-center mb-6">
+            <div class="care-bear care-bear-pink heart-beat"></div>
+            <div
+              class="care-bear care-bear-blue heart-beat"
+              style="animation-delay: 0.5s"
+            ></div>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Con Todo Mi Amor</h3>
+          <p class="text-blue-100 text-lg mb-4">
+            Esta página es solo una pequeña muestra del inmenso amor que siento
+            por ti
+          </p>
+          <div class="text-4xl heart-beat">💕</div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
