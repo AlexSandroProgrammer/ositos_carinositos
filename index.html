@@ -15,16 +15,16 @@
       >
         <div class="absolute inset-0">
           <div
-            class="care-bear care-bear-pink float-animation absolute top-10 left-10"
+            class="care-bear care-bear-pink float-animation absolute top-5 left-5"
           ></div>
           <div
-            class="care-bear care-bear-blue bounce-animation absolute top-20 right-20"
+            class="care-bear care-bear-blue bounce-animation absolute top-5 right-5"
           ></div>
           <div
-            class="care-bear care-bear-green float-animation absolute bottom-20 left-20"
+            class="care-bear care-bear-green float-animation absolute bottom-5 left-5"
           ></div>
           <div
-            class="care-bear care-bear-pink bounce-animation absolute bottom-10 right-10"
+            class="care-bear care-bear-pink bounce-animation absolute bottom-5 right-5"
           ></div>
         </div>
 
@@ -78,6 +78,11 @@
     </div>
 
     <div id="birthday-celebration">
+      <!-- creamos la etiqueta para colocar la cancion de fondo -->
+      <audio id="audio" autoplay loop>
+        <source src="assets/audio/feliz.mp3" type="audio/mpeg" />
+      </audio>
+
       <!-- Navigation -->
       <nav class="gradient-bg p-4 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
@@ -337,9 +342,6 @@
       >
         <div class="absolute inset-0">
           <div
-            class="care-bear care-bear-green float-animation absolute top-10 right-10"
-          ></div>
-          <div
             class="care-bear care-bear-pink bounce-animation absolute bottom-10 left-10"
           ></div>
         </div>
@@ -369,12 +371,12 @@
                 ></div>
                 <div class="timeline-content">
                   <h3 class="text-xl font-bold mb-2">Primer Encuentro</h3>
-                  <p class="text-blue-100">
+                  <p class="text-white text-md">
                     El día que nuestros ojos se cruzaron por primera vez y nos
                     dimos la mano sin imaginar la historia que construiriamos
                     juntos.
                   </p>
-                  <p class="text-sm text-blue-200 mt-2">01 Mayo 2024</p>
+                  <p class="text-sm text-blue-200 mt-2">18 Abril 2024</p>
                 </div>
               </div>
 
@@ -388,28 +390,11 @@
                 ></div>
                 <div class="timeline-content">
                   <h3 class="text-xl font-bold mb-2">Primera Cita</h3>
-                  <p class="text-blue-100">
-                    Una noche mágica que marcó el inicio de nuestra hermosa
-                    aventura juntos
+                  <p class="text-white text-md">
+                    Soñaba con invitarte a salir y conocer un poco mas de tu
+                    vida sin imaginar que me llevaria una hermosa sorpresa.
                   </p>
-                  <p class="text-sm text-blue-200 mt-2">Febrero 2023</p>
-                </div>
-              </div>
-
-              <div
-                class="timeline-item-mobile timeline-item"
-                style="animation-delay: 0.6s"
-              >
-                <div
-                  class="timeline-dot border-purple-300"
-                  style="border-color: #c4b5fd"
-                ></div>
-                <div class="timeline-content">
-                  <h3 class="text-xl font-bold mb-2">Primer "Te Amo"</h3>
-                  <p class="text-blue-100">
-                    Las palabras más sinceras que han salido de mi corazón
-                  </p>
-                  <p class="text-sm text-blue-200 mt-2">Abril 2023</p>
+                  <p class="text-sm text-blue-200 mt-2">01 Mayo 2024</p>
                 </div>
               </div>
 
@@ -423,11 +408,11 @@
                 ></div>
                 <div class="timeline-content">
                   <h3 class="text-xl font-bold mb-2">Primer Aniversario</h3>
-                  <p class="text-blue-100">
+                  <p class="text-white text-md">
                     Celebrando un año lleno de amor, risas y momentos
                     inolvidables
                   </p>
-                  <p class="text-sm text-blue-200 mt-2">Febrero 2024</p>
+                  <p class="text-sm text-blue-200 mt-2">01 Mayo 2025</p>
                 </div>
               </div>
             </div>
@@ -435,7 +420,6 @@
             <!-- Desktop Timeline -->
             <div class="hidden md:block relative">
               <div class="timeline-line"></div>
-
               <div
                 class="timeline-item-desktop timeline-item"
                 style="animation-delay: 0.2s"
@@ -444,14 +428,15 @@
                   <div class="message-card p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-2">Primer Encuentro</h3>
                     <p class="text-blue-100">
-                      El día que nuestros ojos se cruzaron por primera vez y
-                      supe que eras especial
+                      El día que nuestros ojos se cruzaron por primera vez y nos
+                      dimos la mano sin imaginar la historia que construiriamos
+                      juntos.
                     </p>
-                    <p class="text-sm text-blue-200 mt-2">Enero 2023</p>
+                    <p class="text-sm text-blue-200 mt-2">18 Abril 2024</p>
                   </div>
                 </div>
                 <div class="timeline-dot-desktop border-blue-300">
-                  <span class="text-blue-500">❤️</span>
+                  <span class="text-blue-500">💙</span>
                 </div>
                 <div class="w-1/2 pl-8"></div>
               </div>
@@ -462,57 +447,38 @@
               >
                 <div class="w-1/2 pr-8"></div>
                 <div class="timeline-dot-desktop border-pink-300">
-                  <span class="text-pink-500">💕</span>
+                  <span class="text-pink-500">💙</span>
                 </div>
                 <div class="w-1/2 pl-8">
                   <div class="message-card p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-2">Primera Cita</h3>
                     <p class="text-blue-100">
-                      Una noche mágica que marcó el inicio de nuestra hermosa
-                      aventura juntos
+                      Soñaba con invitarte a salir y conocer un poco mas de tu
+                      vida sin imaginar que me llevaria una hermosa sorpresa.
                     </p>
-                    <p class="text-sm text-blue-200 mt-2">Febrero 2023</p>
+                    <p class="text-sm text-blue-200 mt-2">01 Mayo 2024</p>
                   </div>
                 </div>
               </div>
 
               <div
                 class="timeline-item-desktop timeline-item"
-                style="animation-delay: 0.6s"
+                style="animation-delay: 0.2s"
               >
                 <div class="w-1/2 pr-8 text-right">
-                  <div class="message-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-2">Primer "Te Amo"</h3>
-                    <p class="text-blue-100">
-                      Las palabras más sinceras que han salido de mi corazón
-                    </p>
-                    <p class="text-sm text-blue-200 mt-2">Abril 2023</p>
-                  </div>
-                </div>
-                <div class="timeline-dot-desktop border-purple-300">
-                  <span class="text-purple-500">💜</span>
-                </div>
-                <div class="w-1/2 pl-8"></div>
-              </div>
-
-              <div
-                class="timeline-item-desktop timeline-item"
-                style="animation-delay: 0.8s"
-              >
-                <div class="w-1/2 pr-8"></div>
-                <div class="timeline-dot-desktop border-green-300">
-                  <span class="text-green-500">🌟</span>
-                </div>
-                <div class="w-1/2 pl-8">
                   <div class="message-card p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-2">Primer Aniversario</h3>
                     <p class="text-blue-100">
                       Celebrando un año lleno de amor, risas y momentos
                       inolvidables
                     </p>
-                    <p class="text-sm text-blue-200 mt-2">Febrero 2024</p>
+                    <p class="text-sm text-blue-200 mt-2">01 Mayo 2025</p>
                   </div>
                 </div>
+                <div class="timeline-dot-desktop border-blue-300">
+                  <span class="text-blue-500">💙</span>
+                </div>
+                <div class="w-1/2 pl-8"></div>
               </div>
             </div>
           </div>
@@ -540,14 +506,14 @@
             <div
               class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg scroll-animation"
             >
-              <div class="text-4xl mb-4">💖</div>
+              <div class="text-4xl mb-4">💙</div>
               <h3 class="text-xl font-bold text-gray-800 mb-4">
                 Mi Inspiración Diaria
               </h3>
               <p class="text-gray-700 leading-relaxed">
-                Cada mañana que despierto, tu amor es la primera luz que ilumina
-                mi día. Eres mi inspiración, mi motivación y la razón por la que
-                quiero ser mejor cada día.
+                Cada mañana que despierto, tu amor ilumina mi día. Eres mi
+                inspiración, mi motivación y la razón por la que quiero ser
+                mejor cada día.
               </p>
             </div>
 
@@ -559,36 +525,22 @@
                 Promesa Eterna
               </h3>
               <p class="text-gray-700 leading-relaxed">
-                Prometo amarte en cada amanecer, cuidarte en cada tormenta, y
-                celebrar contigo cada pequeña victoria que la vida nos regale.
+                Prometo amarte en cada amanecer, cuidarte en cada situacion
+                complicada, y celebrar contigo cada pequeña victoria que la vida
+                nos regale.
               </p>
             </div>
 
             <div
-              class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl shadow-lg scroll-animation"
+              class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg scroll-animation"
             >
               <div class="text-4xl mb-4">✨</div>
               <h3 class="text-xl font-bold text-gray-800 mb-4">
-                Mi Estrella Guía
+                Eres Mi Estrellita
               </h3>
               <p class="text-gray-700 leading-relaxed">
-                En la inmensidad del universo, encontré mi estrella más
-                brillante: tú. Gracias por guiar mi camino con tu amor
-                incondicional.
-              </p>
-            </div>
-
-            <div
-              class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg scroll-animation"
-            >
-              <div class="text-4xl mb-4">🦋</div>
-              <h3 class="text-xl font-bold text-gray-800 mb-4">
-                Transformación
-              </h3>
-              <p class="text-gray-700 leading-relaxed">
-                Tu amor me ha transformado como una mariposa emerge de su
-                capullo. Contigo he descubierto la versión más hermosa de quien
-                puedo ser.
+                En la inmensidad del mundo nunca imagine encontrar una estrella
+                tan brillante como tú. Tu luz es la que ilumina mi camino.
               </p>
             </div>
           </div>

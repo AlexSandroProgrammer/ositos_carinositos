@@ -85,4 +85,34 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, 500);
   }
+
+  // Try to play audio immediately when page loads
+  const audio = document.getElementById("audio");
+  if (audio) {
+    // Add a small delay to ensure page is fully loaded
+    setTimeout(() => {
+      audio.play().catch((e) => {
+        console.log("Autoplay was prevented, trying on user interaction");
+        // If autoplay fails, try on first user interaction
+        document.addEventListener(
+          "click",
+          function enableAudio() {
+            audio.play().catch((err) => console.log("Audio play failed"));
+            document.removeEventListener("click", enableAudio);
+          },
+          { once: true }
+        );
+
+        // Also try on any touch interaction (for mobile)
+        document.addEventListener(
+          "touchstart",
+          function enableAudioTouch() {
+            audio.play().catch((err) => console.log("Audio play failed"));
+            document.removeEventListener("touchstart", enableAudioTouch);
+          },
+          { once: true }
+        );
+      });
+    }, 1000);
+  }
 });
