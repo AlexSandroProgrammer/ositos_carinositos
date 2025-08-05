@@ -1,3 +1,33 @@
+// Audio playback function
+function playBirthdayAudio() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    // Try to play audio immediately
+    audio.play().catch((e) => {
+      console.log("Autoplay was prevented, trying on user interaction");
+      // If autoplay fails, try on first user interaction
+      document.addEventListener(
+        "click",
+        function enableAudio() {
+          audio.play().catch((err) => console.log("Audio play failed"));
+          document.removeEventListener("click", enableAudio);
+        },
+        { once: true }
+      );
+
+      // Also try on any touch interaction (for mobile)
+      document.addEventListener(
+        "touchstart",
+        function enableAudioTouch() {
+          audio.play().catch((err) => console.log("Audio play failed"));
+          document.removeEventListener("touchstart", enableAudioTouch);
+        },
+        { once: true }
+      );
+    });
+  }
+}
+
 // Birthday countdown functionality
 function updateCountdown() {
   const now = new Date().getTime();
@@ -25,6 +55,23 @@ function updateCountdown() {
     // It's her birthday!
     document.getElementById("countdown-container").classList.add("hidden");
     document.getElementById("birthday-celebration").classList.remove("hidden");
+
+    // Play audio when it's her birthday
+    playBirthdayAudio();
+  }
+}
+
+// Check if it's birthday and play audio on page load
+function initializePage() {
+  const now = new Date().getTime();
+  const birthday = new Date("August 6, 2025 00:00:00").getTime();
+  const distance = birthday - now;
+
+  // If it's already her birthday (August 6th or later), play audio immediately
+  if (distance <= 0) {
+    setTimeout(() => {
+      playBirthdayAudio();
+    }, 1000);
   }
 }
 
@@ -36,9 +83,11 @@ setInterval(updateCountdown, 1000);
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -51,7 +100,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         block: "start",
       });
       // Close mobile menu if open
-      mobileMenu.classList.add("hidden");
+      if (mobileMenu) {
+        mobileMenu.classList.add("hidden");
+      }
     }
   });
 });
@@ -75,8 +126,9 @@ document.querySelectorAll(".scroll-animation").forEach((el) => {
   observer.observe(el);
 });
 
-// Initialize first section as visible
+// Initialize page when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize first section animations
   const firstSection = document.querySelector("#inicio .scroll-animation");
   if (firstSection) {
     setTimeout(() => {
@@ -86,33 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   }
 
-  // Try to play audio immediately when page loads
-  const audio = document.getElementById("audio");
-  if (audio) {
-    // Add a small delay to ensure page is fully loaded
-    setTimeout(() => {
-      audio.play().catch((e) => {
-        console.log("Autoplay was prevented, trying on user interaction");
-        // If autoplay fails, try on first user interaction
-        document.addEventListener(
-          "click",
-          function enableAudio() {
-            audio.play().catch((err) => console.log("Audio play failed"));
-            document.removeEventListener("click", enableAudio);
-          },
-          { once: true }
-        );
-
-        // Also try on any touch interaction (for mobile)
-        document.addEventListener(
-          "touchstart",
-          function enableAudioTouch() {
-            audio.play().catch((err) => console.log("Audio play failed"));
-            document.removeEventListener("touchstart", enableAudioTouch);
-          },
-          { once: true }
-        );
-      });
-    }, 1000);
-  }
+  // Initialize page and check if audio should play
+  initializePage();
 });
