@@ -1,36 +1,36 @@
 // Birthday countdown functionality
-// function updateCountdown() {
-//   const now = new Date().getTime();
-//   const birthday = new Date("August 6, 2025 00:00:00").getTime();
-//   const distance = birthday - now;
+function updateCountdown() {
+  const now = new Date().getTime();
+  const birthday = new Date("August 6, 2025 00:00:00").getTime();
+  const distance = birthday - now;
 
-//   if (distance > 0) {
-//     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//     const hours = Math.floor(
-//       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-//     );
-//     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  if (distance > 0) {
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-//     document.getElementById("days").textContent = days;
-//     document.getElementById("hours").textContent = hours;
-//     document.getElementById("minutes").textContent = minutes;
-//     document.getElementById("seconds").textContent = seconds;
-//     document.getElementById("days-left").textContent = days;
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+    document.getElementById("days-left").textContent = days;
 
-//     // Show countdown container
-//     document.getElementById("countdown-container").classList.remove("hidden");
-//     document.getElementById("birthday-celebration").classList.add("hidden");
-//   } else {
-//     // It's her birthday!
-//     document.getElementById("countdown-container").classList.add("hidden");
-//     document.getElementById("birthday-celebration").classList.remove("hidden");
-//   }
-// }
+    // Show countdown container
+    document.getElementById("countdown-container").classList.remove("hidden");
+    document.getElementById("birthday-celebration").classList.add("hidden");
+  } else {
+    // It's her birthday!
+    document.getElementById("countdown-container").classList.add("hidden");
+    document.getElementById("birthday-celebration").classList.remove("hidden");
+  }
+}
 
-// // Update countdown every second
-// updateCountdown();
-// setInterval(updateCountdown, 1000);
+// Update countdown every second
+updateCountdown();
+setInterval(updateCountdown, 1000);
 
 // Mobile menu toggle
 const menuToggle = document.getElementById("menu-toggle");
